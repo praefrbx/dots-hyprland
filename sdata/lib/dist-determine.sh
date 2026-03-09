@@ -85,7 +85,7 @@ export OS_DISTRO_ID_LIKE=$(awk -F'=' '/^ID_LIKE=/ { gsub("\"","",$2); print tolo
 ####################
 # Determine distro ID
 
-if [[ "$OS_DISTRO_ID" =~ ^(arch|endeavouros|cachyos)$ ]]; then
+if [[ "$OS_DISTRO_ID" =~ ^(arch|endeavouros|cachyos|artix)$ ]]; then
   OS_GROUP_ID="arch"
   print_os_group_id_functions=(print_os_group_id)
 elif [[ "$OS_DISTRO_ID_LIKE" == "arch" ]]; then
